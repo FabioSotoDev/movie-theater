@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Movie.destroy_all
+
+Movie.create(name: 'Avengers')
+Movie.create(name: 'Avengers Civil Wat')
+Movie.create(name: 'Avengers The Age of Ultron')
+Movie.create(name: 'Avengers Infinity Wat')
+Movie.create(name: 'Avengers End Game')
+
+User.create(name: 'Fabio Soto', email: 'fabiosoto@ravn.co')
