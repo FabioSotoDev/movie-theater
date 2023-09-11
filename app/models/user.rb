@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   has_many :tickets
 
-  enum role: [:super_admin, :admin, :customer]
+  enum role: %i(customer administrator super_admin)
+
+  validates :email, :presence => true, :uniqueness => true
 end
