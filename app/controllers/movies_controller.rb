@@ -12,10 +12,22 @@ class MoviesController < ApplicationController
   end
 
   def create
-    @movie = Movie.new(name: params[:name])
+    @movie = Movie.create(name: params[:name])
 
-    if @movie.save
-      render json: @movie
-    end
+    render json: @movie    
+  end
+
+  def update
+    @movie = Movie.find(params[:id])
+    @movie.update(name: params[:name])
+
+    render json: @movie
+  end
+
+  def destroy
+    @movie = Movie.find(params[:id])
+    @movie.destroy
+
+    render json: @movie
   end
 end
