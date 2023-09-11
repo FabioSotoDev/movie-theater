@@ -1,7 +1,7 @@
 class CreateFunctions < ActiveRecord::Migration[6.0]
   def change
     create_table :functions do |t|
-      t.datetime :date, :presence => true
+      t.datetime :date, null => false
       t.belongs_to :movie
 
       t.timestamps
